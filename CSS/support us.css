@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.boycott-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+    .boycott-section h2 {
+        color: #800000;
+        margin-bottom: 20px;
+    }
+    .boycott-section h3 {
+       font-weight:lighter;
+       
+    }
+    
+
+  header{
+    background-color:rgb(10, 10, 12);
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align:center;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 10, 12);
+    font-family: Arial, sans-serif;
+}
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+    .intro-section h2 {
+        color: #006241;
+        margin-bottom: 20px;
+    }
+
+.donation-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+    .donation-section h2 {
+        color: #006241;
+        margin-bottom: 20px;
+    }
+    .donation-section li {
+        position: relative;
+    }
+    .donation-section .tooltip-text {
+        visibility: hidden;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        text-align: left;
+        padding: 10px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        top: 100%; /* right below the li */
+        left: 0;
+        margin-top: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .donation-section li:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+  
+ 
+  
+  .img-small {
+    color: #ccc;
+    height: 100px;
+  }
+
+.description {
+    color : mediumseagreen;
+    
+    margin: 10px 0;
+}
+
+
+  
+  .dots {
+    color: #ccc;
+    text-align: right;
+    font-size:20px;
+  }
+  a:link {
+    color: rgb(7, 0, 0);
+  }
+
+
+a:hover {
+    color: #009e60;
+}
+  
+  a:active {
+  color:blue
+  }
+
+  .more{
+    display: flex;
+    justify-content: center;
+  }
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-left:200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+.boycott-section li {
+    position: relative;
+    margin-top:8px;
+}
+
+
+.boycott-section li:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+    /* Footer */
+    footer {
+    margin-top: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+
+
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+body {
+    background-color: rgb(10, 10, 12);
+}
+
+/* Nav-Bar */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+.nav-links {
+    display: flex; /* Use flexbox for the links */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of links */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgb(35, 35, 36) transparent; /* For Firefox */
+    padding-bottom: 8px; /* Add padding to the bottom to prevent overlap */
+}
+
+    .nav-links::-webkit-scrollbar {
+        height: 4px; /* Set a lower height for the scrollbar */
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36); /* Match the background color of the navbar */
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: rgb(35, 35, 36); /* Match the background color of the navbar */
+        border-radius: 10px; /* Optional: round the corners of the scrollbar */
+    }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Optional: change color on hover */
+        }
+
+    .nav-links a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: beige;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+@media (max-width: 800px) {
+    nav {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Slightly smaller logo font size */
+    }
+
+        .logo img {
+            height: 60px; /* Reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for links */
+        margin-left: 10px; /* Reduce margin */
+    }
+    header {
+        font-size: 20px;
+    }
+    .intro-section, .boycott-section, .donation-section {
+    padding:10px 10px 20px 10px; 
+    margin:20px 5px 0px 5px;
+   
+
+    }
+}
+
+    @media (max-width: 414px) {
+       
+        nav {
+            padding: 5px 10px; /* Further reduce padding */
+        }
+
+        .logo {
+            padding-right: 10px;
+            padding-left: 0;
+            margin-left: 0;
+            font-size: 10px; /* Further reduce logo font size */
+        }
+
+            .logo img {
+                margin: 0;
+                padding: 0;
+                height: 60px; /* Further reduce logo size */
+            }
+
+        .nav-links a {
+            font-size: 13px; /* Smaller font size for links */
+            padding-right: 4px;
+            margin-left: 5px; /* Reduced margin */
+        }
+
+        .card {
+            width: 100%; /* Full width on very small screens */
+            padding: 10px; /* Further reduce padding */
+            font-size: 0.75rem; /* Smaller text size */
+        }
+
+        .cards-container {
+            padding: 10px;
+        }
+    }
+        

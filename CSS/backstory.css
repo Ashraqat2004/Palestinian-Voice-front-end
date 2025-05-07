@@ -1,0 +1,291 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Optional: smooth scroll on anchor links */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    background-color: rgb(10, 10, 12);
+}
+
+/* Nav-Bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+.nav-links {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(35, 35, 36) transparent;
+}
+
+    .nav-links::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36);
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: rgb(35, 35, 36);
+        border-radius: 10px;
+    }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+    .nav-links a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: beige;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+/* Section Buttons */
+#sectionButtons {
+    margin-top: 40px;
+    top: 100px;
+    z-index: 99;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+    #sectionButtons button {
+        background-color: #555;
+        border: none;
+        color: white;
+        padding: 8px 14px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+
+        #sectionButtons button:hover {
+            background-color: #90C67C;
+            color: black;
+        }
+
+    #sectionButtons::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    #sectionButtons::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36);
+    }
+
+    #sectionButtons::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 3px;
+    }
+
+        #sectionButtons::-webkit-scrollbar-thumb:hover {
+            background-color: #999;
+        }
+
+/* Header Section */
+.header {
+    font-size: xx-large;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Main Content */
+.content {
+    padding: 30px 63px;
+    background-color: rgb(10, 10, 12);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* News Cards */
+.news {
+    display: flex;
+    align-items: center;
+    border: 1px solid silver;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 20px;
+    max-width: 70%;
+    background-color: rgb(35, 35, 36);
+    color: white;
+}
+
+    .news img,
+    .news video {
+        max-width: 320px;
+        height: auto;
+        border-radius: 4px;
+    }
+
+.textbox {
+    margin-left: 25px;
+}
+
+    .textbox h2 {
+        color: #90C67C;
+        margin-bottom: 15px;
+    }
+
+    .textbox p {
+        line-height: 1.6;
+    }
+
+.special {
+    color: #DF2E38;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .news {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    nav {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Slightly smaller logo font size */
+    }
+
+        .logo img {
+            height: 60px; /* Reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for links */
+        margin-left: 10px; /* Reduce margin */
+    }
+
+    .news {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .textbox {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #sectionButtons {
+        grid-template-columns: repeat(2, 1fr);
+        top: 80px;
+    }
+    .header {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    #sectionButtons {
+        grid-template-columns: 1fr;
+    }
+
+   
+    .content {
+        padding: 20px 15px;
+    }
+
+    .news {
+        max-width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+}
+@media (max-width: 414px) {
+    nav {
+        padding: 5px 10px; /* Further reduce padding */
+    }
+
+    .logo {
+        padding-right: 10px;
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 10px; /* Further reduce logo font size */
+    }
+
+        .logo img {
+            margin: 0;
+            padding: 0;
+            height: 60px; /* Further reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 13px; /* Smaller font size for links */
+        padding-right: 4px;
+        margin-left: 5px; /* Reduced margin */
+    }
+   
+
+}

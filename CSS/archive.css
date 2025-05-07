@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+.nav-links {
+    display: flex; /* Use flexbox for the links */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of links */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgb(35, 35, 36) transparent; /* For Firefox */
+    padding-bottom: 8px; /* Add padding to the bottom to prevent overlap */
+}
+
+    .nav-links::-webkit-scrollbar {
+        height: 4px; /* Set a lower height for the scrollbar */
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36); /* Match the background color of the navbar */
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: rgb(35, 35, 36); /* Match the background color of the navbar */
+        border-radius: 10px; /* Optional: round the corners of the scrollbar */
+    }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Optional: change color on hover */
+        }
+
+    .nav-links a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: beige;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+
+body {
+    background-color: rgb(10, 10, 12);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Container */
+.cards-container {
+    display: flex;
+    flex-grow: 1; /* Expand to push footer to bottom */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Card */
+.card {
+    color: #ddd;
+    width: 220px; /* Two cards per row with gap */
+    max-width: 500px; /* Optional max to prevent too wide on large screens */
+    padding: 10px;
+    background-color: #222222;
+    border: 1px solid #474242;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for scaling */
+    display: flex; /* Make the card a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Space out children */
+}
+
+    .card img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+        margin: 10px 0 5px;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin: 0 0 10px;
+    }
+
+    .card a {
+        text-decoration: none;
+        color: #960018;
+        font-weight: bold;
+        margin-top: auto; /* Push the link to the bottom */
+    }
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+    nav {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Slightly smaller logo font size */
+    }
+
+        .logo img {
+            height: 60px; /* Reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for links */
+        margin-left: 10px; /* Reduce margin */
+    }
+
+    .card {
+        width: 45%; /* Adjust width for two cards per row */
+        max-width: none;
+        padding: 15px; /* Reduce padding */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .cards-container {
+        padding: 20px;
+    }
+}
+
+    
+
+
+    @media (max-width: 414px) {
+        nav {
+            padding: 5px 10px; /* Further reduce padding */
+        }
+
+        .logo {
+            padding-right: 10px;
+            padding-left: 0;
+            margin-left: 0;
+            font-size: 10px; /* Further reduce logo font size */
+        }
+
+            .logo img {
+                margin: 0;
+                padding: 0;
+                height: 60px; /* Further reduce logo size */
+            }
+
+        .nav-links a {
+            font-size: 13px; /* Smaller font size for links */
+            padding-right: 4px;
+            margin-left: 5px; /* Reduced margin */
+        }
+
+        .card {
+            width: 100%; /* Full width on very small screens */
+            padding: 10px; /* Further reduce padding */
+            font-size: 0.75rem; /* Smaller text size */
+        }
+
+        .cards-container {
+            padding: 10px;
+        }
+    }

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestinian Voice Retrieve Password</title>
+    <link rel="stylesheet" href="CSS/p.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgb(10, 10, 12);
+            font-family: Arial, sans-serif;
+        }
+
+        .forget-pass {
+            color: white;
+            background: #333;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+            .forget-pass h2 {
+                margin-bottom: 20px;
+            }
+
+            .forget-pass input[type="text"],
+            .forget-pass input[type="password"],
+            .forget-pass input[type="email"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .forget-pass button {
+                width: 100%;
+                padding: 10px;
+                background-color: #26a69a;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+                .forget-pass button:hover {
+                    background-color: #00796b;
+                }
+
+            .forget-pass .links {
+                margin-top: 15px;
+                font-size: 14px;
+            }
+
+                .forget-pass .links a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    display: block;
+                    margin: 5px 0;
+                }
+
+                    .forget-pass .links a:hover {
+                        text-decoration: underline;
+                    }
+
+     
+    </style>
+</head>
+<body>
+    <script>
+        // Sample list of valid emails (for demonstration purposes)
+        const validEmails = ["user@example.com", "test@example.com", "admin@example.com"];
+
+        function navigateToNewPassword() {
+            console.log("Navigating to new password page..."); // Debugging line
+            window.location.replace('newPassword.html'); // Navigate to newPassword.html in the same tab
+        }
+
+        function validateForm() {
+            const emailInput = document.getElementById('email').value;
+            const codeInput = document.getElementById('code').value;
+
+            // If everything is valid, navigate to the new password page
+            navigateToNewPassword();
+            return false; // Prevent form submission since we are handling navigation
+        }
+    </script>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="photos/Palestine logo3.png" alt="Palestinian Voice Logo">
+            <span>Palestinian Voice</span>
+        </div>
+        <div class="nav-links">
+
+            <a href="login.html">SignUp/LogIn</a>
+            <a href="Palestinian Voice Home.html">Home</a>
+            <a href="archive.html">Archive</a>
+            <a href="Casualties.html">Casualties</a>
+            <a href="backstory.html">Backstory</a>
+            <a href="Support us .html">Support us</a>
+            <a href="Palestinian Voice About.html">About us</a>
+        </div>
+    </nav>
+
+    <div class="forget-pass">
+        <h3>Please add your E-mail and we will send you a code</h3>
+        <form id="emailForm" onsubmit="return validateForm()">
+            <input type="email" id="email" placeholder="E-mail" required>
+            <br />
+
+            <p>Add the code we sent you</p>
+            <input type="text" id="code" placeholder="123Xf" required>
+            <button type="submit">Confirm</button>
+        </form>
+        <div class="links">
+            <button style="width:120px; background-color:dimgrey">Resend code</button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer style=" margin-top:70px;">
+        Palestinian Voice &copy; 2025
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added to prevent overflow */
+    font-family:Arial;
+    
+}
+
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+body {
+    background-color: rgb(10, 10, 12);
+}
+
+/* Nav-Bar */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+.nav-links {
+    display: flex; /* Use flexbox for the links */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of links */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgb(35, 35, 36) transparent; /* For Firefox */
+    padding-bottom: 8px; /* Add padding to the bottom to prevent overlap */
+}
+
+    .nav-links::-webkit-scrollbar {
+        height: 4px; /* Set a lower height for the scrollbar */
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36); /* Match the background color of the navbar */
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: rgb(35, 35, 36); /* Match the background color of the navbar */
+        border-radius: 10px; /* Optional: round the corners of the scrollbar */
+    }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Optional: change color on hover */
+        }
+
+    .nav-links a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: beige;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+
+
+/* Counter */
+.counter-wrapper {
+    background: url(../photos/1699680367776.jpeg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10rem 9%;
+    margin-top: 0rem;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .counter-wrapper::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+.counter {
+    text-align: center;
+    color: #ddd;
+    z-index: 2;
+    position: relative;
+}
+
+    .counter::before {
+        position: absolute;
+        content: '';
+        bottom: -2rem;
+        left: 50%;
+        width: 20%;
+        height: .2rem;
+        background: #ffffff;
+        border-radius: .5rem;
+        transform: translateX(-50%);
+    }
+
+    .counter .count {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .counter p {
+        font-size: 1.4rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+
+/* Details */
+.details {
+    background-color: rgb(10, 10, 12);
+    color: #ddd;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: repeat(4, 200px);
+    grid-row-gap: 30px;
+    grid-column-gap: 5px;
+}
+
+.pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+    .pic img {
+        width: 300px;
+        height: 170px;
+        border-radius: 20px;
+        padding:0;
+    }
+
+.explain {
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+    .explain h2 {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .explain p {
+        display: flex;
+        align-items: center;
+    }
+/* Footer */
+footer
+{
+   
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    
+}
+/* Media and sizing */
+@media (max-width: 1090px) {
+    html {
+    font-size:60%;
+    }
+    
+    .nav-links a {
+        font-size: 16px; 
+        
+    }
+    .logo {
+        font-size: 20px; 
+    }
+        .pic img {
+        width: 200px;
+        max-width: 250px;
+        max-height: 130px;
+    }
+    .explain {
+        font-size:13px;
+        padding-top:50px;
+    }
+}
+
+@media (max-width: 800px) {
+    nav {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Slightly smaller logo font size */
+    }
+
+        .logo img {
+            height: 60px; /* Reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for links */
+        margin-left: 10px; /* Reduce margin */
+    }
+    .counter-wrapper {
+        grid-template-columns: repeat(2, 1fr); 
+        grid-row-gap: 8rem;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        grid-row-gap: 16px;
+        padding: 0px;
+        margin: 0;
+        margin-top: 30px;
+    }
+    .pic img {
+        margin-top: 20px;
+        width: 250px;
+        max-width: 250px;
+        max-height: 1450px;
+        margin: 0;
+        padding-top:0;
+    }
+    .explain {
+        margin-bottom: 30px;
+        padding-top: 17px;
+        padding-left: 8px;
+        padding-bottom:0px;
+        margin:0;
+        height:150px;
+    }
+
+}
+
+@media (max-width: 600px) {
+   
+
+    .counter-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    .pic img {
+        width: 210px;
+        max-width: 260px;
+        max-height: 140px;
+    }
+
+    .explain {
+        padding-left: 8px;
+        padding-bottom: 1rem;
+    
+}
+
+}
+
+@media (max-width: 414px) {
+    nav {
+        padding: 5px 10px; /* Further reduce padding */
+    }
+
+    .logo {
+        padding-right: 10px;
+        padding-left: 0;
+        margin-left: 0;
+        font-size: 10px; /* Further reduce logo font size */
+    }
+
+        .logo img {
+            margin: 0;
+            padding: 0;
+            height: 60px; /* Further reduce logo size */
+        }
+
+    .nav-links a {
+        font-size: 13px; /* Smaller font size for links */
+        padding-right: 4px;
+        margin-left: 5px; /* Reduced margin */
+    }
+   
+    footer {
+        margin-top: 70px;
+    }
+    }

@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 10, 12);
+    font-family: Arial, sans-serif;
+}
+
+.new-pass {
+    color: white;
+    background: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin-top: 130px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+    .new-pass h2 {
+        margin-bottom: 20px;
+    }
+
+    .new-pass input[type="text"],
+    .new-pass input[type="password"],
+    .new-pass input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .new-pass button {
+        width: 100%;
+        padding: 10px;
+        background-color: #26a69a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+        .new-pass button:hover {
+            background-color: #00796b;
+        }
+
+    .new-pass .links {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+        .new-pass .links a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+            .new-pass .links a:hover {
+                text-decoration: underline;
+            }
+/* Footer */
+footer {
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+.footer-space {
+    height: 70px;
+}
+
+header {
+    background-color: rgb(10, 10, 12);
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(10, 10, 12);
+    font-family: Arial, sans-serif;
+}
+
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Nav-Bar */
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(35, 35, 36);
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+.nav-links {
+    display: flex; /* Use flexbox for the links */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of links */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgb(35, 35, 36) transparent; /* For Firefox */
+    padding-bottom: 8px; /* Add padding to the bottom to prevent overlap */
+}
+
+    .nav-links::-webkit-scrollbar {
+        height: 4px; /* Set a lower height for the scrollbar */
+    }
+
+    .nav-links::-webkit-scrollbar-track {
+        background: rgb(35, 35, 36); /* Match the background color of the navbar */
+    }
+
+    .nav-links::-webkit-scrollbar-thumb {
+        background-color: rgb(35, 35, 36); /* Match the background color of the navbar */
+        border-radius: 10px; /* Optional: round the corners of the scrollbar */
+    }
+
+        .nav-links::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Optional: change color on hover */
+        }
+
+    .nav-links a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: beige;
+    }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+
+
+main.content {
+    display: flex;
+    padding: 40px;
+    gap: 30px;
+}
+
+.left-block {
+    margin-top: 10px;
+    flex: 1.8;
+
+}
+.left-block img {
+    width: 800px;
+    height: auto;
+}
+    .left-block h1 {
+    padding-left: 12px;
+    color: ghostwhite;
+    text-shadow: -3px 3px #71797E;
+    margin-bottom: 23px;
+    font-size: 40px;
+}
+.right-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    height: 600px;
+    margin-top: 88px;
+}
+
+.feature {
+    color: #ddd;
+    border: 0px solid #ccc;
+    padding: 10px;
+}
+
+.card {
+    color: #ddd;
+    border: 0px solid #ccc;
+    padding: 0 10px 10px 10px;
+
+}
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.img-placeholder, .img-small {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    margin-bottom: 10px;
+}
+
+.right-block::-webkit-scrollbar {
+    width: 14px;
+    height: 30px;
+}
+
+.right-block::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border-radius: 10px;
+}
+
+.right-block::-webkit-scrollbar-track {
+    background: #605c5c;
+    border-radius: 10px;
+}
+
+.right-block::-webkit-scrollbar-button:single-button {
+    background-color: #5a5a5a;
+    height: 14px;
+    display: block;
+    border: none;
+}
+
+    /* Up arrow */
+    .right-block::-webkit-scrollbar-button:single-button:vertical:decrement {
+        background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><polygon points='0,6 4,2 8,6' fill='white'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* Down arrow */
+    .right-block::-webkit-scrollbar-button:single-button:vertical:increment {
+        background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><polygon points='0,2 4,6 8,2' fill='white'/></svg>");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.img-small {
+    color: #ccc;
+    height: 100px;
+}
+
+.description {
+    color: #ccc;
+    margin: 10px 0;
+}
+.left-block img, .right-block img {
+    margin-bottom:5px;
+}
+
+.dots {
+    color: #ccc;
+    text-align: right;
+    font-size: 20px;
+}
+header {
+    background-color: rgb(10, 10, 12);
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.about-section,
+.src-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333;
+}
+
+    .about-section h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .about-section details {
+        margin-top: 15px;
+        font-weight: bolder;
+    }
+
+
+    .about-section summary {
+        cursor: pointer;
+        font-weight: bold;
+        list-style: none;
+        color: dimgrey;
+    }
+
+@media (max-width:1200px) {
+
+    .card {
+        margin-bottom: 40px;
+    }
+
+    main.content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-block, .right-block {
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-block {
+        height: auto;
+        overflow-y: visible;
+        margin-top: 20px;
+    }
+
+    .feature img {
+        width: 100%;
+        height: auto;
+    }
+
+    .feature h2, .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+@media (max-width: 800px) {
+    nav {
+        padding: 8px 15px; /* Reduce padding */
+    }
+
+    .logo {
+        font-size: 18px; /* Slightly smaller logo font size */
+    }
+
+        .logo img {
+            height: 60px; /* Reduce logo size */
+        }
+    .reg {
+    margin-top:500px;
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for links */
+        margin-left: 10px; /* Reduce margin */
+    }
+    .left-block h1 {
+    font-size:24px;
+    }
+    header h1 {
+        padding-top:15px;
+    font-size:40px;
+    }
+    .login-container {
+        margin-bottom: 283px;
+    }
+
+    .new-pass{
+        margin-bottom:358px;
+    }
+    .forget-pass{
+        margin-bottom : 246px;
+    }
+
+    .register{
+        margin-bottom : -338px;
+    }
+
+    .about-section, .src-section {
+        padding: 10px 10px 20px 10px;
+        margin: 20px 5px 0px 5px;
+    }
+    }
+    @media (max-width: 414px) {
+        nav {
+            padding: 5px 10px;
+        }
+
+        .logo {
+            padding-right: 10px;
+            padding-left: 0;
+            margin-left: 0;
+            font-size: 10px;
+        }
+
+            .logo img {
+                margin: 0;
+                padding: 0;
+                height: 60px;
+            }
+
+        .nav-links a {
+            font-size: 13px;
+            padding-right: 4px;
+            margin-left: 5px;
+        }
+
+        .card {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.75rem;
+        }
+
+        .cards-container {
+            padding: 10px;
+        }
+    }
