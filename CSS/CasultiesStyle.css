@@ -80,7 +80,7 @@ nav {
 
 /* Counter */
 .counter-wrapper {
-    background: url(../photos/1699680367776.jpeg);
+    background: url(Desktop/Webproject/photos/1699680367776.jpg);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 10rem 9%;
